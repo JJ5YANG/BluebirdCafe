@@ -8,7 +8,7 @@ footer.innerHTML = `
                 <img class="md:hidden mx-auto md:mx-0" src="assets/logos/logo.png" style="object-fit: contain; width:80px; cursor: pointer;" />
                 <div class="md:grid grid-cols-3 md:gap-16 lg:gap-20 xl:gap-28 mt-8">
                     <div style="color:white">
-                        <div class="text-center md:text-left md-font-size bodyFont mb-2">
+                        <div class="text-center md:text-left md-text bodyFont mb-2">
                             Follow us
                         </div>
                         <div class="flex justify-center md:justify-start">
@@ -17,20 +17,20 @@ footer.innerHTML = `
                             <a href="mailto:"><svg width="25" height="25" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope-square" class="svg-inline--fa fa-envelope-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#FFF" d="M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zM178.117 262.104C87.429 196.287 88.353 196.121 64 177.167V152c0-13.255 10.745-24 24-24h272c13.255 0 24 10.745 24 24v25.167c-24.371 18.969-23.434 19.124-114.117 84.938-10.5 7.655-31.392 26.12-45.883 25.894-14.503.218-35.367-18.227-45.883-25.895zM384 217.775V360c0 13.255-10.745 24-24 24H88c-13.255 0-24-10.745-24-24V217.775c13.958 10.794 33.329 25.236 95.303 70.214 14.162 10.341 37.975 32.145 64.694 32.01 26.887.134 51.037-22.041 64.72-32.025 61.958-44.965 81.325-59.406 95.283-70.199z"></path></svg></a>
                         </div>
                     </div>
-                    <div class="mt-8 md:mt-0" style="color:white">
-                        <div class="text-center md:text-left md-font-size bodyFont mb-2">Navigate</div>
-                        <div class="text-center md:text-left xs-font-size bodyFont md:flex">
+                    <div class="mt-8 md:mt-0" style="color:var(--white);">
+                        <div class="text-center md:text-left md-text bodyFont mb-2">Navigate</div>
+                        <div class="text-center md:text-left xs-text bodyFont md:flex">
                             <div>
                                 <div><a href="/contact.html">Contact Us</a></div>
                                 <div><a href="/menu.html">Menu</a></div>
                             </div>
                         </div>
                     </div>
-                    <div class="mt-8 md:mt-0" style="color:white">
-                        <div class="text-center md:text-left md-font-size bodyFont mb-2">
+                    <div class="mt-8 md:mt-0" style="color:var(--white);">
+                        <div class="text-center md:text-left md-text bodyFont mb-2">
                             Location
                         </div>
-                        <div class="text-center md:text-left xs-font-size bodyFont">
+                        <div class="text-center md:text-left xs-text bodyFont">
                             <a href="https://www.google.com/maps/place/Blue+Cross+Centre,+644+Main+St,+Moncton,+NB+E1C+1E2/@46.0889982,-64.7769742,17z/data=!3m1!4b1!4m5!3m4!1s0x4ca0b938fea0843b:0x1137e1b4fa616093!8m2!3d46.0889982!4d-64.7747855" target="_blank">
                                 644 Main St<br>Moncton, NB
                             </a>

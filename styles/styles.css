@@ -467,11 +467,11 @@ html {
     transform: skewY(-3deg);
 }
   
-.slanted-div:after {
+/* .slanted-div:after {
     bottom: 0;
     transform-origin: right bottom;
     transform: skewY(-3deg);
-}
+} */
 
 
 
