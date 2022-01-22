@@ -22,8 +22,9 @@ navbar.innerHTML = `
       <div>
         <img class="bluebird-logo" src="assets/logos/logo.png" style="object-fit: contain;" />
       </div>
-      <div class="flex-1">
-        
+      <div class="flex-1 flex justify-end">
+        <i class="social-icons fab fa-instagram"></i>
+        <i class="social-icons fab fa-facebook-square"></i>
       </div>
     </div>
   </div>
