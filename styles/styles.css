@@ -20,9 +20,9 @@ xxl (1536px)
 html {
     scroll-behavior: smooth;
 }
-.headerFont {
-    font-family: "Calibri", sans-serif;
-}
+/* .headerFont {
+    font-family: 'Homemade Apple', cursive;
+} */
 .bodyFont {
     font-family: "Calibri", sans-serif;
 }
@@ -259,6 +259,10 @@ html {
 
 
 /* Navigation Classes */
+.bluebird-logo {
+    width: 15rem;
+    cursor: pointer;
+}
 .menu-toggle .bar{
     display: block;
     cursor: pointer;
@@ -308,7 +312,12 @@ html {
 .social-icons:not(:first-child) {
     margin-left: 1.25rem;
 }
-
+.nav-item {
+    cursor: pointer;
+}
+.nav-item:not(:first-child) {
+    margin-top: 1.25rem;
+}
 
 
 /* Button Classes */
@@ -372,9 +381,6 @@ html {
 
 
 /* Home Page Classes */
-.bluebird-logo {
-    width: 15rem;
-}
 @media screen and (max-width: 768px) {
     .bluebird-logo {
         width: 10rem;
