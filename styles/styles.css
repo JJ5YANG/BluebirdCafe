@@ -14,7 +14,7 @@ xxl (1536px)
     --offwhite: #F6F6F6;
     --black: #111111;
     --white: #FFFFFF;
-    --green: #29bd83;
+    --green: #6ac5a2;
     --darkGreen:#128c7e;
 }
 html {
@@ -254,32 +254,7 @@ html {
     object-fit:cover;
 }
 
-/* slanted div */
-.slanted-div {
-    position: relative;
-    padding: 75px 0;
-    background: #128c7e;
-    overflow: visible;
-    z-index: 1;
-  }
-  
-.slanted-div:before, .slanted-div:after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: inherit;
-    z-index: -1;
-    top: 0;
-    transform-origin: left top;
-    transform: skewY(-3deg);
-  }
-  
-  .slanted-div:after {
-    bottom: 0;
-    transform-origin: right bottom;
-    transform: skewY(-3deg);
-  }
+
 
 
 /* Home Page Classes */
@@ -322,6 +297,31 @@ html {
     width:100%;
     height:100%;
     object-fit:cover;
+}
+.slanted-div {
+    position: relative;
+    padding: 75px 0;
+    background: var(--green);
+    overflow: visible;
+    z-index: 1;
+}
+  
+.slanted-div:before, .slanted-div:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    transform-origin: left top;
+    transform: skewY(-3deg);
+}
+  
+.slanted-div:after {
+    bottom: 0;
+    transform-origin: right bottom;
+    transform: skewY(-3deg);
 }
 
 
