@@ -4,7 +4,15 @@ document.querySelectorAll('[data-type="vue"]').forEach(dom => {
 		el: '#' + appId,
 		data:{
 			showMenu: false,
-			currentTab: appId
+			currentTab: appId,
+			gallery:[
+				'assets/food-1.jpg',
+				'assets/food-2.jpg',
+				'assets/food-3.jpg',
+				'assets/food-4.jpg',
+				'assets/food-5.jpg',
+				'assets/food-6.jpg',
+			],
 		},
 		// delimiters:['%{', '}'],
 		watch:{

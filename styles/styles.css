@@ -78,16 +78,21 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--darkblue); 
-}
-.splide__style .splide__slide img {
-	width : auto;
-	height: auto;
-    max-height:100vh;
+    background: var(--blue); 
 }
 
-.splide__style .splide__pagination__page.is-active{
-    background:var(--white) !important;
+.splide__arrows{
+    display:none;
+}
+.splide--nav .splide__track .splide__list .splide__slide.is-active{
+    border-color: var(--white) !important;
+    transition: border-color 0.2s ease-in;
+}
+.gallery-img-card-container {
+    height:0;
+    overflow:hidden;
+    padding-bottom:50%;
+    position: relative;
 }
 
 
