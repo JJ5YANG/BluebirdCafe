@@ -240,7 +240,32 @@ html {
     object-fit:cover;
 }
 
-
+/* slanted div */
+.slanted-div {
+    position: relative;
+    padding: 200px 0;
+    background: #128c7e;
+    overflow: visible;
+    z-index: 1;
+  }
+  
+.slanted-div:before, .slanted-div:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    transform-origin: left top;
+    transform: skewY(-3deg);
+  }
+  
+  .slanted-div:after {
+    bottom: 0;
+    transform-origin: right bottom;
+    transform: skewY(-3deg);
+  }
 
 
 /* Home Page Classes */
