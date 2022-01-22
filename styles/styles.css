@@ -30,6 +30,34 @@ html {
 
 
 
+/* Font Size Classes */
+.xxl-text {
+    font-size: 2.8rem;
+    line-height: 1 !important;
+}
+.xl-text {
+    font-size: 2.3rem;
+    line-height: 1.15 !important;
+}
+.lg-text {
+    font-size: 1.8rem;
+    line-height: 1.2 !important;
+}
+.md-text {
+    font-size: 1.35rem;
+    line-height: 1.25 !important;
+}
+.sm-text {
+    font-size: 1rem;
+    line-height: 1.3 !important;
+}
+.xs-text {
+    font-size: 0.85rem;
+    line-height: 1.35 !important;
+}
+
+
+
 /* Scrollbar Classes */
 ::-webkit-scrollbar {
     width: 7px;
