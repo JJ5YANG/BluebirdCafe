@@ -10,17 +10,11 @@ xxl (1536px)
 
 /* Global Classes */
 :root {
-    --darkblue: #032E5B;
-    --lightblue : #586BA4;
-    --baige: #F5DD90;
-    --orange: #F68E5F;
-    --darkorange: #F76C5E;
+    --blue: #29bd83;
     --offwhite: #F6F6F6;
-    --gray: #939393;
     --black: #111111;
     --white: #FFFFFF;
-    --green: #4BB543;
-    --red: #B71C1C;
+    --green: #29bd83;
 }
 html {
     scroll-behavior: smooth;
