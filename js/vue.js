@@ -26,7 +26,7 @@ document.querySelectorAll('[data-type="vue"]').forEach(dom => {
 				this.showMenu = !this.showMenu
 			},
 			navigateHome(){
-				location.href='/'
+				location.href='/BluebirdCafe'
 			},
 			selectMarker(marker) {
 				if(Object.keys(this.selectedMarker).length != 0) this.selectedMarker.closeInfoWindow()

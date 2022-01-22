@@ -18,7 +18,7 @@ navbar.innerHTML = `
           </div>
           <div class="text-center w-full headerFont md-text font-bold">
             <div class="nav-item">
-              <a href="/" :style="[currentTab == 'vue-home' ? {'color':'var(--green)'} : {'':''}]">
+              <a href="/BluebirdCafe" :style="[currentTab == 'vue-home' ? {'color':'var(--green)'} : {'':''}]">
                 HOME
               </a>
             </div>
@@ -47,7 +47,7 @@ navbar.innerHTML = `
         </div>
         <div class="hidden lg:flex items-center font-bold sm-text">
           <div class="nav-item-desktop">
-            <a href="/" :style="[currentTab == 'vue-home' ? {'color':'var(--green)'} : {'':''}]">
+            <a href="/BluebirdCafe" :style="[currentTab == 'vue-home' ? {'color':'var(--green)'} : {'':''}]">
               HOME
             </a>
           </div>
