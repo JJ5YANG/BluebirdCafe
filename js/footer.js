@@ -21,8 +21,8 @@ footer.innerHTML = `
                         <div class="text-center md:text-left md-text bodyFont mb-2">Navigate</div>
                         <div class="text-center md:text-left xs-text bodyFont md:flex">
                             <div>
-                                <div><a href="/contact.html">Contact Us</a></div>
-                                <div><a href="/menu.html">Menu</a></div>
+                                <div><a href="contact">Contact Us</a></div>
+                                <div><a href="menu">Menu</a></div>
                             </div>
                         </div>
                     </div>
