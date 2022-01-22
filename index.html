@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="styles/splide.css">
 </head>
 <body>
-    <div data-type="vue" id="vue-home">
+    <div data-type="vue" id="vue-home" :style="[showMenu ? {'overflow':'hidden', 'max-height':'100vh'} : {'':''}]">
         <div id="nav-bar" class="absolute top-0 left-0 w-full z-50"></div>
         <div class="hero-img-card relative">
             <div class="absolute w-full h-full" style="z-index: 2; color:white">
