@@ -387,9 +387,20 @@ html {
         padding-bottom: 45%;
         position: relative;
     }
+    .hero-img-card-black {
+        height: 0;
+        overflow: hidden;
+        padding-bottom: 45%;
+        position: relative;
+    }
 }
 @media screen and (max-width: 1280px){
     .hero-img-card {
+        position: relative;
+        width: 100%;
+        height: 85vh;
+    }
+    .hero-img-card-black {
         position: relative;
         width: 100%;
         height: 85vh;
@@ -403,6 +414,15 @@ html {
     bottom: 0;
     top: 0;
     background: rgba(0,0,0,0.2);
+}
+.hero-img-card-black::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(0,0,0,0.5);
 }
 .hero-img-cover {
     position:absolute;
