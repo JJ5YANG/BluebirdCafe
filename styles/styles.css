@@ -308,6 +308,9 @@ html {
 .social-icons:not(:first-child) {
     margin-left: 1.25rem;
 }
+.nav-item {
+    cursor: pointer;
+}
 .nav-item:not(:first-child) {
     margin-top: 1.25rem;
 }
