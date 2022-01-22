@@ -147,51 +147,41 @@ html {
 
 
 /* Button Classes */
-.searchButton-transparent {
-    background-color: transparent;
-    color: var(--white);
-    border: 2px solid;
-    border-color: var(--white);
-    transition: background-color 0.2s ease-out;
-}
-.searchButton-transparent:hover {
-    color: var(--darkblue);
-    border-color: var(--darkblue);
-    transition: background-color 0.2s ease-out;
-    background-color: white;
-}
 .transparentButton-white {
     background-color: transparent;
     color: var(--white);
+    border-radius: 10px;
     border: 2px solid;
     border-color: var(--white);
     transition: color 0.2s ease-out;
 }
 .transparentButton-white:hover {
-    color: var(--darkblue);
-    border-color: var(--darkblue);
+    color: var(--blue);
+    border-color: var(--blue);
     transition: color 0.2s ease-out;
 }
 .transparentButton {
     background-color: transparent;
     color: var(--black);
+    border-radius: 10px;
     border: 2px solid;
     border-color: var(--black);
     transition: color 0.2s ease-out;
 }
 .transparentButton:hover {
-    color: var(--darkblue);
-    border-color: var(--darkblue);
+    color: var(--blue);
+    border-color: var(--blue);
     transition: color 0.2s ease-out;
 }
 .solidButton {
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--offwhite);
+    color: var(--blue);
+    border-radius: 10px;
     transition: background-color 0.2s ease-out;
 }
 .solidButton:hover {
-    background-color: var(--darkblue);
-    border-color: var(--darkblue);
+    background-color: var(--blue);
+    color: var(--offwhite);
     transition: background-color 0.2s ease-out;
 }
 
@@ -203,10 +193,10 @@ html {
 }
 @media screen and (max-width: 768px) {
     .bluebird-logo {
-        width: 8rem;
+        width: 10rem;
     }
 }
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1280px){
     .hero-img-card {
         height: 0;
         overflow: hidden;
@@ -214,12 +204,21 @@ html {
         position: relative;
     }
 }
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1280px){
     .hero-img-card {
         position: relative;
         width: 100%;
         height: 85vh;
     }
+}
+.hero-img-card::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(0,0,0,0.2);
 }
 .hero-img-cover {
     position:absolute;
