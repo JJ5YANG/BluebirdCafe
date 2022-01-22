@@ -259,6 +259,10 @@ html {
 
 
 /* Navigation Classes */
+.bluebird-logo {
+    width: 15rem;
+    cursor: pointer;
+}
 .menu-toggle .bar{
     display: block;
     cursor: pointer;
@@ -377,9 +381,6 @@ html {
 
 
 /* Home Page Classes */
-.bluebird-logo {
-    width: 15rem;
-}
 @media screen and (max-width: 768px) {
     .bluebird-logo {
         width: 10rem;
