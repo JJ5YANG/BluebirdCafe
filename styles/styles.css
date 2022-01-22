@@ -87,7 +87,7 @@ html {
 }
 
 .splide__style .splide__pagination__page.is-active{
-    background:var(--darkblue) !important;
+    background:var(--white) !important;
 }
 
 
@@ -167,6 +167,14 @@ html {
 }
 .mobile-nav {
     transform: translate(0%)!important;
+}
+.nav-menu {
+    transform: translate(-101%);
+    transition: transform 0.7s ease-in-out;
+}
+.mobile-nav {
+    transform: translate(0%)!important;
+    transition: transform 0.7s ease-in-out;
 }
 
 #mobile-menu.is-active .bar:nth-child(1){
