@@ -15,6 +15,7 @@ xxl (1536px)
     --black: #111111;
     --white: #FFFFFF;
     --green: #29bd83;
+    --darkGreen:#128c7e;
 }
 html {
     scroll-behavior: smooth;
