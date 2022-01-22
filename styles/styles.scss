@@ -1,0 +1,164 @@
+/* Global Classes */
+:root {
+    --darkblue: #032E5B;
+    --lightblue : #586BA4;
+    --baige: #F5DD90;
+    --orange: #F68E5F;
+    --darkorange: #F76C5E;
+    --offwhite: #F6F6F6;
+    --gray: #939393;
+    --black: #111111;
+    --white: #FFFFFF;
+    --green: #4BB543;
+    --red: #B71C1C;
+}
+html {
+    scroll-behavior: smooth;
+}
+.headerFont {
+    font-family: "Calibri", sans-serif;
+}
+.bodyFont {
+    font-family: "Calibri", sans-serif;
+}
+.global-background-img {
+	min-height:100%;
+	background-size:cover !important;
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+}
+
+
+
+/* Scrollbar Classes */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--offwhite); 
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--black);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--darkblue); 
+}
+.splide__style .splide__slide img {
+	width : auto;
+	height: auto;
+    max-height:100vh;
+}
+
+.splide__style .splide__pagination__page.is-active{
+    background:var(--darkblue) !important;
+}
+
+
+
+/* Padding Classes */
+.no-padding-y {
+	padding-top: 0%;
+	padding-bottom: 0%;
+}
+.xs-padding-y {
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+.sm-padding-y {
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+.md-padding-y {
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+.lg-padding-y {
+	padding-top: 7%;
+	padding-bottom: 7%;
+}
+.xl-padding-y {
+	padding-top: 12%;
+	padding-bottom: 12%;
+}
+
+
+
+.no-padding-x {
+	padding-left: 0%;
+	padding-right: 0%;
+}
+.xs-padding-x {
+	padding-left: 1%;
+	padding-right: 1%;
+}
+.sm-padding-x {
+	padding-left: 2%;
+	padding-right: 2%;
+}
+.md-padding-x {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+.lg-padding-x {
+	padding-left: 7%;
+	padding-right: 7%;
+}
+.xl-padding-x {
+	padding-left: 12%;
+	padding-right: 12%;
+}
+
+
+
+/* Button Classes */
+.searchButton-transparent {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid;
+    border-color: var(--white);
+    transition: background-color 0.2s ease-out;
+}
+.searchButton-transparent:hover {
+    color: var(--darkblue);
+    border-color: var(--darkblue);
+    transition: background-color 0.2s ease-out;
+    background-color: white;
+}
+.transparentButton-white {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid;
+    border-color: var(--white);
+    transition: color 0.2s ease-out;
+}
+.transparentButton-white:hover {
+    color: var(--darkblue);
+    border-color: var(--darkblue);
+    transition: color 0.2s ease-out;
+}
+.transparentButton {
+    background-color: transparent;
+    color: var(--black);
+    border: 2px solid;
+    border-color: var(--black);
+    transition: color 0.2s ease-out;
+}
+.transparentButton:hover {
+    color: var(--darkblue);
+    border-color: var(--darkblue);
+    transition: color 0.2s ease-out;
+}
+.solidButton {
+    background-color: var(--black);
+    color: var(--white);
+    transition: background-color 0.2s ease-out;
+}
+.solidButton:hover {
+    background-color: var(--darkblue);
+    border-color: var(--darkblue);
+    transition: background-color 0.2s ease-out;
+}
