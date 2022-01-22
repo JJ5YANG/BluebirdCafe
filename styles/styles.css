@@ -466,6 +466,47 @@ html {
 
 
 
+/* Contact Page Classes */
+@media screen and (min-width: 768px){
+    .map-container {
+        width: calc(100% - 1px);
+        max-width: 100%;
+        height: 80vh;
+    }
+}
+@media screen and (max-width: 768px){
+    .map-container {
+        width: calc(100% - 1px);
+        max-width: 100%;
+        height: 50vh;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .contact-map-container {
+        width: calc(100% - 1px);
+        max-width: 100%;
+        height: 66vh;
+    }
+}
+@media screen and (max-width: 768px){
+    .contact-map-container {
+        width: calc(100% - 1px);
+        max-width: 100%;
+        height: 40vh;
+    }
+}
+
+.infobox-content{
+    min-width: max-content;
+    padding: 0;
+    background: #FFF;
+    color: #000;
+    border-radius: 5px;
+}
+
+
+
 /*
 
 @media screen and (min-width: 1280px) {
