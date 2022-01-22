@@ -10,10 +10,12 @@
     <script src="js/aos.js"></script>
     <script src="js/vue.min.js"></script>
     <script src="https://kit.fontawesome.com/f086bec7e5.js" crossorigin="anonymous"></script>
+    <script src="js/maptalks.js"></script>
 
     <link href="styles/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/tailwind.min.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/maptalks.css">
 </head>
 <body>
     <div data-type="vue" id="vue-contact">
@@ -25,17 +27,185 @@
                         <!-- <button class="solidButton px-8 py-4 font-bold">We're Open!</button> -->
                         <div>
                             <div class="xl-text mb-8" style="color:#FFF">Contact Us</div>
-                            <div class="sm-text" style="color:#FFF">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut diam risus, faucibus eu magna ac, finibus consequat purus.</div>
+                            <div class="sm-text text-center" style="color:#FFF">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut diam risus, faucibus eu magna ac, finibus consequat purus.</div>
                         </div>
                     </div>
                 </div>
             </div>
             <img src="assets/food-1.jpg" class="hero-img-cover" />
         </div>
+        <div class="lg-padding-y">
+            <div class="container mx-auto">
+                <div class="md-padding-x">
+                    <div class="text-center xl-text mb-3">Find us on</div>
+                    <div class="mb-12 sm-text text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut diam risus, faucibus eu magna ac, finibus consequat purus.</div>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="flex items-center justify-center">
+                            <img style="max-width:250px; object-fit: cover;" src="assets/doordash-logo.png" />
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <img style="max-width:250px; object-fit: cover;" src="assets/ubereats-logo.png" />
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <img style="max-width:250px; object-fit: cover;" src="assets/skipthedishes-logo.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 md:mt-20 contact-map-container">
+            <div id="map" class="w-full h-full"></div>
+        </div>
     </div>
 
     <script src="js/navbar.js"></script>
     <script src="js/footer.js"></script>
     <script src="js/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#vue-home',
+            data:{
+                showMenu: false,
+                currentTab: 'contact',
+                loading: false,
+                devLocation: {
+                    logo:'assets/logos/logo.png',
+                },
+                show1:false,
+                show2:false,
+                show3:false
+            },
+            methods:{
+                toggleMenu(){
+                    this.showMenu = !this.showMenu
+                },
+                navigateHome(){
+                    location.href='/NPRWebsite/'
+                },
+                handleSubmit(){
+                    let form = document.querySelector('#contact-form')
+                    var status = document.querySelector("#form-status");
+                    let firstName = document.querySelector('input[name=firstName]').value
+                    let lastName = document.querySelector('input[name=lastName]').value
+                    let email = document.querySelector('input[name=email]').value
+                    if (!firstName || !lastName || !email){
+                        console.log('ERROR: Missing first name, last name, or email')
+                    } else {
+                        form.addEventListener("submit", async event => {
+                            event.preventDefault();
+                            var data = new FormData(event.target);
+                            this.loading = true
+                            fetch(event.target.action, {
+                                method: form.method,
+                                body: data,
+                                headers: {
+                                    'Accept': 'application/json'
+                                }
+                            }).then(response => {
+                                this.loading = false
+                                status.innerHTML = "Thanks for your submission!";
+                                status.classList.add('success')
+                                form.reset()
+                            }).catch(error => {
+                                this.loading = false
+                                status.innerHTML = "Oops! There was a problem submitting your form."
+                                status.classList.add('error')
+                            });
+                        })
+                    }
+                },
+                selectMarker(marker) {
+                    if(Object.keys(this.selectedMarker).length != 0) this.selectedMarker.closeInfoWindow()
+                    let self = this
+                    let found = self.vectorLayer._geoList.find(x => x._coordinates.x == marker.geometry.location.lng && x._coordinates.y == marker.geometry.location.lat)
+                    self.selectedMarker = found
+                    // console.log('marker', marker, this.map, this.vectorLayer)
+                    if(self.selectedMarker) {
+                        self.selectedMarker.openInfoWindow()
+                    }
+                },
+            },
+            mounted(){
+                console.log('MOUNTED RAN')
+                let self = this
+                let x = this.devLocation
+                this.map = new maptalks.Map('map', {
+                    center: [-79.3067769, 43.8229972],
+                    scrollWheelZoom:false,
+                    zoom: 12,
+                    zoomControl: {
+                        'position'  : 'bottom-right',
+                        'slider'    : false,
+                        'zoomLevel' : false
+                    },
+                    minZoom: 12,
+                    maxZoom: 16,
+                    baseLayer: new maptalks.TileLayer('base', {
+                    'urlTemplate' : `http://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png`,
+                    'subdomains'  : ['a','b','c','d'],
+                    'attribution'  : '&copy; <a href="http://www.osm.org/copyright">OSM</a> contributors, '+
+                    '&copy; <a href="https://carto.com/attributions">CARTO</a>',
+                    })
+                });
+                
+                this.show1 = true
+                setTimeout(() => {
+                    this.show2 = true
+                    
+                }, 250)
+                setTimeout(() => {
+                    this.show3 = true
+                    
+                }, 500)
+                // Add markers here
+
+                setTimeout(() => {
+                    if (this.vectorLayer) this.map.removeLayer(this.vectorLayer);
+                    this.vectorLayer = new maptalks.VectorLayer('vector', {
+                        enableAltitude: true,
+                        drawAltitude: {
+                            lineWidth: 2,
+                            lineColor: '#aaa'
+                        }
+                    }).addTo(self.map);
+                    let iconUrl = self.devLocation.logo
+                    let marker = new maptalks.Marker(
+                        [-79.3067769, 43.8229972],
+                        {
+                            cursor : 'pointer',
+                            'symbol' : {
+                                'markerFile'   : iconUrl || '',
+                                'markerWidth'  : 40,
+                                'markerHeight' : 40,
+                                'markerDx'     : 0,
+                                'markerDy'     : 0,
+                                'markerOpacity': 1
+                            }
+                        }
+                    )
+                    marker.addTo(self.vectorLayer)
+                    
+                    marker.setInfoWindow({
+                        'autoCloseOn': 'click',
+                        'autoPan': false,
+                        'single': false,
+                        'width': 383,
+                        'height': 105,
+                        'custom': true,
+                        'dx': 0,
+                        'dy': -20,
+                        'content': `<div class="infobox-content relative">
+                                <div class="bodyFont" style="padding: 10px 20px 0 20px; max-width: 240px; font-size: 16px;">North Point Realty Inc.</div>
+                                <div style="padding: 0 20px 10px 20px;"></div>
+                                </div>`
+                    });
+                }, 500)
+            },
+            created(){
+                
+                
+            }
+        })
+    </script>
 </body>
 </html>
