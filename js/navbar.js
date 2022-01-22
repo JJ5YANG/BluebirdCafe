@@ -17,6 +17,15 @@ navbar.innerHTML = `
               <span class="bar" :style="[showMenu ? {'background-color':'#000'} : {'':''}]"></span>
             </div>
           </div>
+          <div class="w-full text-center flex justify-center">
+            <img class="bluebird-logo" src="assets/logos/logo.png" style="object-fit: contain;" />
+          </div>
+          <div class="text-center w-full headerFont md-text">
+            <div class="nav-item">HOME</div>
+            <div class="nav-item">ABOUT US</div>
+            <div class="nav-item">CONTACT US</div>
+            <div class="nav-item">OUR MENU</div>
+          </div>
         </div>
       </div>
       <div>

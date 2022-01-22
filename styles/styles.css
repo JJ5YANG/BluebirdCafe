@@ -20,9 +20,9 @@ xxl (1536px)
 html {
     scroll-behavior: smooth;
 }
-.headerFont {
-    font-family: "Calibri", sans-serif;
-}
+/* .headerFont {
+    font-family: 'Homemade Apple', cursive;
+} */
 .bodyFont {
     font-family: "Calibri", sans-serif;
 }
@@ -308,7 +308,9 @@ html {
 .social-icons:not(:first-child) {
     margin-left: 1.25rem;
 }
-
+.nav-item:not(:first-child) {
+    margin-top: 1.25rem;
+}
 
 
 /* Button Classes */
