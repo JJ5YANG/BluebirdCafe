@@ -252,7 +252,7 @@ html {
 /* slanted div */
 .slanted-div {
     position: relative;
-    padding: 200px 0;
+    padding: 75px 0;
     background: #128c7e;
     overflow: visible;
     z-index: 1;

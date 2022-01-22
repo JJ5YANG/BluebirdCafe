@@ -56,16 +56,31 @@
             </div>
         </div>
         <div class="slanted-div">
-            <div class="splide__style splide">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide">
-                            <img src="assets/coffee-2.jpg" />
-                        </li>
-                        <li class="splide__slide">
-                            <img src="assets/coffee-1.jpg" />
-                        </li>
-                    </ul>
+            <div class="mx-auto container">
+                <div class="md-padding-x">
+                    <div class="text-center w-full xl-text mb-3" style="color: var(--white)">Gallery</div>
+                    <div class="text-center mb-12" style="color:var(--white)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut diam risus, faucibus eu magna ac, finibus consequat purus.</div>
+                    <div class="splide__style splide">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide px-5">
+                                    <img style="object-fit: cover; height:320px" src="assets/cafe-3.jpg" />
+                                </li>
+                                <li class="splide__slide px-5">
+                                    <img style="object-fit: cover; height:320px" src="assets/cafe-4.jpg" />
+                                </li>
+                                <li class="splide__slide px-5">
+                                    <img style="object-fit: cover; height:320px" src="assets/cafe-2.jpg" />
+                                </li>
+                                <li class="splide__slide px-5">
+                                    <img style="object-fit: cover; height:320px" src="assets/coffee-1.jpg" />
+                                </li>
+                                <li class="splide__slide px-5">
+                                    <img style="object-fit: cover; height:320px" src="assets/juice-1.jpg" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -79,11 +94,24 @@
     <script src="js/vue.js"></script>
     <script src="js/splide.js"></script>
     <script>
-        new Splide( '.splide', {
-            'cover'      : true,
-            'heightRatio': 0.2,
-            'type': 'loop'
-        } ).mount();
+        // new Splide( '.splide', {
+        //     // 'cover'      : true,
+        //     // 'heightRatio': 0.2,
+        //     'type': 'loop',
+        //     'drag':'free',
+        //     'perPage':2
+        // } ).mount();
+
+        var splide = new Splide( '.splide' );
+
+            splide.on( 'pagination:mounted', function( data ) {
+            // data.items contains all dot items
+            data.items.forEach( function( item ) {
+                item.button.textContent = String( item.page + 1 );
+            } );
+            } );
+
+            splide.mount();
     </script>
 </body>
 </html>
