@@ -419,7 +419,7 @@ html {
     right: 0;
     bottom: 0;
     top: 0;
-    background: rgba(0,0,0,0.2);
+    background: rgba(255,255,255,0.2);
 }
 .hero-img-card-black::after {
     position: absolute;
@@ -441,7 +441,7 @@ html {
 .slanted-div {
     position: relative;
     padding: 75px 0;
-    background: var(--green);
+    background: #ced2c2;
     overflow: visible;
     z-index: 1;
 }

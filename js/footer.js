@@ -1,11 +1,11 @@
 const footer = document.getElementById('footer');
 footer.innerHTML = `
-<div class="w-full" style="background-color:var(--darkGreen);">
+<div class="w-full" style="background-color:#92b1b6;">
     <div class="container mx-auto">
         <div style="padding:2% 5%">
             <div class="my-10 md:my-0">
-                <img class="hidden md:block mx-auto md:mx-0" src="assets/logos/logo.png" style="object-fit: contain; max-width:250px; cursor: pointer;" />
-                <img class="md:hidden mx-auto md:mx-0" src="assets/logos/logo.png" style="object-fit: contain; width:80px; cursor: pointer;" />
+                <img @click="navigateHome()" class="hidden md:block mx-auto md:mx-0" src="assets/logos/logo.png" style="object-fit: contain; max-width:250px; cursor: pointer;" />
+                <img @click="navigateHome()" class="md:hidden mx-auto md:mx-0" src="assets/logos/logo.png" style="object-fit: contain; width:80px; cursor: pointer;" />
                 <div class="md:grid grid-cols-3 md:gap-16 lg:gap-20 xl:gap-28 mt-8">
                     <div style="color:white">
                         <div class="text-center md:text-left md-font-size bodyFont mb-2">
