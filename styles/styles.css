@@ -315,8 +315,17 @@ html {
 .nav-item {
     cursor: pointer;
 }
+.nav-item-desktop {
+    cursor: pointer;
+}
 .nav-item:not(:first-child) {
     margin-top: 1.25rem;
+}
+.nav-item-desktop:not(:first-child) {
+    margin-left: 2rem;
+}
+.nav-item-desktop:last-child {
+    margin-right: 2rem;
 }
 
 
@@ -458,11 +467,11 @@ html {
     transform: skewY(-3deg);
 }
   
-.slanted-div:after {
+/* .slanted-div:after {
     bottom: 0;
     transform-origin: right bottom;
     transform: skewY(-3deg);
-}
+} */
 
 
 

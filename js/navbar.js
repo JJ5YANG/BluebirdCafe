@@ -22,17 +22,17 @@ navbar.innerHTML = `
           </div>
           <div class="text-center w-full headerFont md-text font-bold">
             <div class="nav-item">
-              <a href="/index.html" :style="[currentTab == 'vue-home' ? {'color':'var(--green)'} : {'':''}]">
+              <a href="/BluebirdCafe" :style="[currentTab == 'vue-home' ? {'color':'var(--green)'} : {'':''}]">
                 HOME
               </a>
             </div>
             <div class="nav-item">
-              <a href="/contact.html" :style="[currentTab == 'vue-contact' ? {'color':'var(--green)'} : {'':''}]">
+              <a href="contact" :style="[currentTab == 'vue-contact' ? {'color':'var(--green)'} : {'':''}]">
                 CONTACT US
               </a>
             </div>
             <div class="nav-item">
-              <a href="/menu.html" :style="[currentTab == 'vue-menu' ? {'color':'var(--green)'} : {'':''}]">
+              <a href="menu" :style="[currentTab == 'vue-menu' ? {'color':'var(--green)'} : {'':''}]">
                 OUR MENU
               </a>
             </div>
